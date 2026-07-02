@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Dash | Restaurants</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: #e74c3c;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .restaurant-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .restaurant-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-container {
+            position: relative;
+            height: 180px;
+            width: 100%;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .eta-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .content {
+            padding: 15px;
+        }
+
+        .name-rating {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .rating {
+            background: #27ae60;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .address {
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Top Restaurants Near You</h1>
+</header>
+
+<div class="container">
+    <!-- Restaurant 1 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500" alt="Bistro">
+            <span class="eta-badge">25-30 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">The Velvet Bistro</span>
+                <span class="rating">★ 4.5</span>
+            </div>
+            <p class="description">Authentic French cuisine with a modern twist and fresh ingredients.</p>
+            <p class="address">123 Culinary Ave, Downtown</p>
+        </div>
+    </div>
+
+    <!-- Restaurant 2 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" alt="Pizza">
+            <span class="eta-badge">15-20 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">Pizza Heaven</span>
+                <span class="rating">★ 4.8</span>
+            </div>
+            <p class="description">Wood-fired pizzas and homemade pasta specialties.</p>
+            <p class="address">456 Dough St, Little Italy</p>
+        </div>
+    </div>
+
+    <!-- Restaurant 3 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=500" alt="Sushi">
+            <span class="eta-badge">35-40 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">Sakura Zen</span>
+                <span class="rating">★ 4.7</span>
+            </div>
+            <p class="description">Premium sushi rolls and traditional Japanese ramen.</p>
+            <p class="address">789 Blossom Blvd, Uptown</p>
+        </div>
+    </div>
+
+    <!-- Restaurant 4 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=500" alt="Salad">
+            <span class="eta-badge">20-25 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">Green Leaf Kitchen</span>
+                <span class="rating">★ 4.3</span>
+            </div>
+            <p class="description">Healthy salads, wraps, and cold-pressed juices.</p>
+            <p class="address">101 Wellness Way, Green Park</p>
+        </div>
+    </div>
+
+    <!-- Restaurant 5 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?w=500" alt="Burger">
+            <span class="eta-badge">30-35 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">The Burger Shack</span>
+                <span class="rating">★ 4.4</span>
+            </div>
+            <p class="description">Juicy gourmet burgers with signature truffle fries.</p>
+            <p class="address">202 Patty Ln, West End</p>
+        </div>
+    </div>
+
+    <!-- Restaurant 6 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://plus.unsplash.com/premium_photo-1661730329741-b3bf77019b39?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tacos">
+            <span class="eta-badge">25-30 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">Taco Fiesta</span>
+                <span class="rating">★ 4.6</span>
+            </div>
+            <p class="description">Street-style tacos and spicy Mexican favorites.</p>
+            <p class="address">303 Salsa Cir, Southside</p>
+        </div>
+    </div>
+
+    <!-- Restaurant 7 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=500" alt="Indian">
+            <span class="eta-badge">40-45 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">Curry House</span>
+                <span class="rating">★ 4.9</span>
+            </div>
+            <p class="description">Rich butter chicken and aromatic tandoori dishes.</p>
+            <p class="address">404 Spice Rd, East Market</p>
+        </div>
+    </div>
+
+    <!-- Restaurant 8 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500" alt="Dessert">
+            <span class="eta-badge">10-15 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">Sweet Dreams</span>
+                <span class="rating">★ 4.8</span>
+            </div>
+            <p class="description">Artisan cupcakes, waffles, and gourmet ice cream.</p>
+            <p class="address">505 Sugar St, Central Mall</p>
+        </div>
+    </div>
+
+    <!-- Restaurant 9 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=500" alt="Pasta">
+            <span class="eta-badge">30-40 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">Pasta Palace</span>
+                <span class="rating">★ 4.2</span>
+            </div>
+            <p class="description">Traditional Italian pasta made fresh every morning.</p>
+            <p class="address">606 Wheat Dr, Old Town</p>
+        </div>
+    </div>
+
+    <!-- Restaurant 10 -->
+    <div class="restaurant-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500" alt="BBQ">
+            <span class="eta-badge">45-50 min</span>
+        </div>
+        <div class="content">
+            <div class="name-rating">
+                <span class="name">Smokehouse BBQ</span>
+                <span class="rating">★ 4.5</span>
+            </div>
+            <p class="description">Slow-cooked ribs and smoked brisket with tangy BBQ sauce.</p>
+            <p class="address">707 Grill Pkwy, Industrial District</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
