@@ -6,7 +6,7 @@ A fully dynamic, database-driven Java Web Application that models a food deliver
 
 ## 🎥 System Demonstration
 
-<img width="764" height="406" alt="Recording+2026-07-02+122020+(1) (1)" src="https://github.com/user-attachments/assets/c97efd13-f79d-49cd-bf9f-955770bb5850" />
+<img width="764" height="406" alt="Recording+2026-07-02+122020+(1) (1)" src="https://github.com/user-attachments/assets/e0037a36-be2f-4bc9-9fd9-eaece5267bc8" />
 
 
 
@@ -17,20 +17,20 @@ A fully dynamic, database-driven Java Web Application that models a food deliver
 ### 1. Dynamic Restaurant Marketplace
 The application entry point utilizes `Servlet.java` to interact with a centralized `RestaurantDAOImpl`[cite: 4, 14]. It safely constructs and executes data statements over an established `DBConnection` context pool[cite: 5, 14], parsing active entity profiles into standard Java collections to render dynamic grid layouts[cite: 4, 25].
 
-<img width="1920" height="1020" alt="Screenshot 2026-07-02 125535" src="https://github.com/user-attachments/assets/11a011d5-1758-4a05-8c0b-c8fafa61ba46" />
+<img width="1920" height="1020" alt="Screenshot 2026-07-02 125535" src="https://github.com/user-attachments/assets/0e79e9e0-5527-4643-8762-2c8760ec70be" />
 
 
 ### 2. Context-Aware Menu Resolution
 When an end-user triggers a deep link on a restaurant element, `MenuServlet.java` extracts the relational parameter keys from the HTTP request scope[cite: 2]. It cross-references structural dependency records using `MenuDAOImpl` to deliver context-isolated dish inventories on a per-restaurant basis[cite: 2, 11].
 
-<img width="1920" height="1020" alt="Screenshot 2026-07-02 125550" src="https://github.com/user-attachments/assets/1ec23dca-b5c3-4084-b1cb-818825aa8154" />
+<img width="1920" height="1020" alt="Screenshot 2026-07-02 125550" src="https://github.com/user-attachments/assets/afb33a14-9d19-4ae0-961c-738d8a422599" />
 
 
 ### 3. Stateful Shopping Cart Engine
 State management is handled in memory via `CartServlet.java` and encapsulated inside `Cart.java` using a robust key-value mapping strategy (`Map<Integer, CartItem>`)[cite: 1, 16]. 
 * **Stateful Isolation Rule:** The system establishes an implicit business rule that restricts operations to a singular active establishment session instance[cite: 1]. If an item with a foreign origin parameter is detected, the cart isolates the transaction scope to enforce consistency[cite: 1].
 
-<img width="1920" height="1020" alt="Screenshot 2026-07-02 125638" src="https://github.com/user-attachments/assets/afe6e31f-8b1a-4d9e-9b92-154c3b119c54" />
+<img width="1920" height="1020" alt="Screenshot 2026-07-02 125638" src="https://github.com/user-attachments/assets/db84e5ca-6371-424b-a7f8-4f0866bf7fec" />
 
 
 ### 4. Transaction Pipelines & Checkout Fulfillment
@@ -40,10 +40,9 @@ When processing a purchase through `checkout.jsp`[cite: 23, 24], `OrderServlet` 
 3. Empties the operational cart session reference[cite: 3] before serving individual order details on `ordersuccess.jsp`[cite: 3, 27].
 
 Checkout page-:
-<img width="1920" height="1020" alt="Screenshot 2026-07-02 125649" src="https://github.com/user-attachments/assets/307fcb01-b4ac-4083-94c5-6d775b78fe07" />
-
+<img width="1920" height="1020" alt="Screenshot 2026-07-02 125649" src="https://github.com/user-attachments/assets/2f8f0ec5-8e7d-4312-b059-7b6616d015ff" />
 Order Successful Page-:
-<img width="1920" height="1020" alt="Screenshot 2026-07-02 125708" src="https://github.com/user-attachments/assets/63dbeaa7-58c4-48e4-a248-4c778bcb572b" />
+<img width="1920" height="1020" alt="Screenshot 2026-07-02 125708" src="https://github.com/user-attachments/assets/3b3eefc6-8e27-4e3b-8811-6ccaa654f9ed" />
 
 
 
